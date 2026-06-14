@@ -4,68 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitalo-Clock</title>
-    <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100wh;
-            margin: 0;
-            padding: 0;
-            background-image: url("img/watch.png");
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            overflow-x: hidden;
-           
-        }
-        #clockbox{
-            margin-left: -16vh;
-            margin-top: -14vh;
-            height: 120vh;
-            width: 351vh;
-            border-radius: 3px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* background-color: black; */
-            color: white;
-            font-size:  4rem;
-            font-weight: 700;
-            /* border: 8px rgb(231, 231, 231) solid; */
-            /* border-radius: 25px; */
-            object-fit: contain;
-        }
-
-        h1{
-            margin-left: 55px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="clockbox"></div>
     <!-- <h1>DIGITAL CLOCK</h1> -->
 
-    <script>
-       
-       function timeclock(){
-       let date=new Date();
-        let h= date.getHours();
-        let m= date.getMinutes();
-        let s= date.getSeconds();
-
-        h=(h<10)? "0" + h : h;
-        m=(m<10)? "0" + m : m;
-        s=(s<10)? "0" + s : s;
-
-        let time=h +":" + m  + ":"+s;
-
-        document.getElementById("clockbox").innerText=time;
-        setTimeout(timeclock,1000);
-        }
-        timeclock();
-        </script>
+ <script src="script.js"></script>
 </body>
 </html>
